@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Website</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="bg-black text-white p-4">
+        <div class="container flex items-center justify-between mx-auto">
+          <div class="hidden md:block"></div>
+          <p class="text-xs md:text-base">
+            Sign up and get 20% off to your first order.
+            <u><b>Sign Up Now</b></u>
+          </p>
+          <i class="fa-solid fa-xmark hidden md:block"></i>
+        </div>
+      </div>
+      <div class="bg-white text-black p-3">
+        <div class="container navbar mx-auto">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a class="text-white text-base font-semibold">Shop</a></li>
+                <li>
+                  <a class="text-white text-base font-semibold">On Sale</a>
+                </li>
+                <li>
+                  <a class="text-white text-base font-semibold">New Arrivals</a>
+                </li>
+                <li>
+                  <a class="text-white text-base font-semibold">Brands</a>
+                </li>
+              </ul>
+            </div>
+            <h1 class="text-3xl font-bold">SHOP.CO</h1>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a class="text-base font-semibold">Shop</a></li>
+              <li><a class="text-base font-semibold">On Sale</a></li>
+              <li><a class="text-base font-semibold">New Arrivals</a></li>
+              <li><a class="text-base font-semibold">Brands</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <div class="indicator">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
+                  <span class="badge badge-sm indicator-item">8</span>
+                </div>
+              </div>
+              <div
+                tabindex="0"
+                class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow"
+              >
+                <div class="card-body">
+                  <span class="text-lg font-bold">8 Items</span>
+                  <span class="text-info">Subtotal: $999</span>
+                  <div class="card-actions">
+                    <button class="btn btn-primary btn-block">View cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section Start -->
+      <section>
+        <div class="bg-slate-100 text-black">
+          <div class="container mx-auto py-10">
+            <div class="hero">
+              <div
+                class="hero-content flex-col lg:flex-row-reverse justify-between gap-8"
+              >
+                <div class="lg:w-1/2">
+                  <img
+                    src="./assets/images/Rectangle 2.png"
+                    class="max-w-sm rounded-lg shadow-2xl w-11/12 sm:w-full mx-auto"
+                  />
+                </div>
+                <div class="w-full lg:w-1/2 mx-auto text-center lg:text-left">
+                  <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold">
+                    FIND CLOTHES THAT MATCHES YOUR STYLE
+                  </h1>
+                  <p class="py-6">
+                    Browse through our diverse range of meticulously crafted
+                    garments, designed to bring out your individuality and cater
+                    to your sense of style.
+                  </p>
+                  <button class="btn bg-black rounded-full px-9 text-white">
+                    Shop Now
+                  </button>
+                  <div class="py-6">
+                    <div
+                      class="stats stats-vertical md:stats-horizontal shadow text-white"
+                    >
+                      <div class="stat">
+                        <div class="stat-value font-semibold">200+</div>
+                        <div class="stat-title">International Brands</div>
+                      </div>
+
+                      <div class="stat">
+                        <div class="stat-value font-semibold">2,000+</div>
+                        <div class="stat-title">High-Quality Products</div>
+                      </div>
+
+                      <div class="stat">
+                        <div class="stat-value font-semibold">30,000+</div>
+                        <div class="stat-title">Happy Customers</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Section End -->
+
+      <!-- Logo Section Start -->
+      <section>
+        <div class="bg-black">
+          <div
+            class="container mx-auto flex justify-between items-center flex-col lg:flex-row gap-5 py-8"
+          >
+            <div class="cursor-pointer">
+              <img src="./assets/Logos/Group.svg" alt="brand-logo-1" />
+            </div>
+            <div class="cursor-pointer">
+              <img src="./assets/Logos/zara-logo-1 1.svg" alt="brand-logo-2" />
+            </div>
+            <div class="cursor-pointer">
+              <img src="./assets/Logos/gucci-logo-1 1.svg" alt="brand-logo-3" />
+            </div>
+            <div class="cursor-pointer">
+              <img src="./assets/Logos/prada-logo-1 1.svg" alt="brand-logo-4" />
+            </div>
+            <div class="cursor-pointer">
+              <img src="./assets/Logos/Group (1).svg" alt="brand-logo-5" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Logo Section End -->
+
+      <!-- NEW ARRIVALS Section Start -->
+      <section>
+        <div class="bg-white">
+          <div class="container mx-auto py-24">
+            <div class="flex flex-col gap-14 items-center text-black">
+              <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold">
+                NEW ARRIVALS
+              </h1>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-5"
+              >
+                <div class="card bg-slate-100 w-80 shadow-xl">
+                  <figure>
+                    <img src="./assets/images/image 7.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title lowercase">
+                      T-SHIRT WITH TAPE DETAILS
+                    </h2>
+                    <div>
+                      <div class="rating">
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                          checked="checked"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-actions items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <p class="text-2xl font-semibold">$120</p>
+                        <del class="text-xl text-gray-400">$160</del>
+                      </div>
+                      <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-slate-100 w-80 shadow-xl">
+                  <figure>
+                    <img src="./assets/images/image 8.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title lowercase">SKINNY FIT JEANS</h2>
+                    <div>
+                      <div class="rating">
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                          checked="checked"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-actions items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <p class="text-2xl font-semibold">$120</p>
+                        <del class="text-xl text-gray-400">$160</del>
+                      </div>
+                      <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-slate-100 w-80 shadow-xl">
+                  <figure>
+                    <img src="./assets/images/image 9.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title lowercase">CHECKERED SHIRT</h2>
+                    <div>
+                      <div class="rating">
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                          checked="checked"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-actions items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <p class="text-2xl font-semibold">$120</p>
+                        <del class="text-xl text-gray-400">$160</del>
+                      </div>
+                      <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-slate-100 w-80 shadow-xl">
+                  <figure>
+                    <img src="./assets/images/image 10.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title lowercase">SLEEVE STRIPED T-SHIRT</h2>
+                    <div>
+                      <div class="rating">
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                          checked="checked"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-actions items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <p class="text-2xl font-semibold">$120</p>
+                        <del class="text-xl text-gray-400">$160</del>
+                      </div>
+                      <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-center items-center">
+                <button class="btn bg-black text-white rounded-full px-9">
+                  View All
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- NEW ARRIVALS Section End -->
+
+      <!-- Top Selling Products Section Start -->
+      <section>
+        <div class="bg-white">
+          <div class="container mx-auto py-24">
+            <div class="flex flex-col gap-14 items-center text-black">
+              <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold uppercase">
+                top selling
+              </h1>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-5"
+              >
+                <div class="card bg-slate-100 w-80 shadow-xl">
+                  <figure>
+                    <img src="./assets/images/image 11.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title lowercase">VERTICAL STRIPED SHIRT</h2>
+                    <div>
+                      <div class="rating">
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                          checked="checked"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-actions items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <p class="text-2xl font-semibold">$212</p>
+                        <del class="text-xl text-gray-400">$2500</del>
+                      </div>
+                      <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-slate-100 w-80 shadow-xl">
+                  <figure>
+                    <img src="./assets/images/image 12.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title lowercase">
+                      COURAGE GRAPHIC T-SHIRT
+                    </h2>
+                    <div>
+                      <div class="rating">
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                          checked="checked"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-actions items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <p class="text-2xl font-semibold">$145</p>
+                        <del class="text-xl text-gray-400">$200</del>
+                      </div>
+                      <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-slate-100 w-80 shadow-xl">
+                  <figure>
+                    <img src="./assets/images/image 13.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title lowercase">
+                      LOOSE FIT BERMUDA SHORTS
+                    </h2>
+                    <div>
+                      <div class="rating">
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                          checked="checked"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-actions items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <p class="text-2xl font-semibold">$80</p>
+                        <del class="text-xl text-gray-400">$120</del>
+                      </div>
+                      <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-slate-100 w-80 shadow-xl">
+                  <figure>
+                    <img src="./assets/images/image 14.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title lowercase">FADED SKINNY JEANS</h2>
+                    <div>
+                      <div class="rating">
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                          checked="checked"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-actions items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <p class="text-2xl font-semibold">$210</p>
+                        <del class="text-xl text-gray-400">$300</del>
+                      </div>
+                      <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-center items-center">
+                <button class="btn bg-black text-white rounded-full px-9">
+                  View All
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Top Selling Products Section End -->
+
+      <!-- OUR HAPPY CUSTOMERS Section Start -->
+      <section>
+        <div class="bg-white">
+          <div class="container mx-auto py-24">
+            <div class="flex gap-10 items-center flex-col text-black">
+              <div
+                class="flex justify-between items-center gap-4 flex-col md:flex-row text-black w-full"
+              >
+                <h1
+                  class="text-4xl md:text-5xl lg:text-7xl font-bold uppercase"
+                >
+                  OUR HAPPY CUSTOMERS
+                </h1>
+                <div class="flex gap-5 text-xl">
+                  <div
+                    class="flex items-center justify-center bg-black text-white w-10 h-10 rounded-full cursor-pointer"
+                  >
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </div>
+                  <div
+                    class="flex items-center justify-center bg-black text-white w-10 h-10 rounded-full cursor-pointer"
+                  >
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-5"
+              >
+                <div class="card bg-slate-100 w-96 shadow-xl">
+                  <div class="card-body">
+                    <div>
+                      <div class="rating">
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                          checked="checked"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                      </div>
+                    </div>
+                    <h2 class="card-title">Sarah M.</h2>
+                    <p>
+                      "I'm blown away by the quality and style of the clothes I
+                      received from Shop.co. From casual wear to elegant
+                      dresses, every piece I've bought has exceeded my
+                      expectations.”
+                    </p>
+                  </div>
+                </div>
+                <div class="card bg-slate-100 w-96 shadow-xl">
+                  <div class="card-body">
+                    <div>
+                      <div class="rating">
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                          checked="checked"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                      </div>
+                    </div>
+                    <h2 class="card-title">Alex K.</h2>
+                    <p>
+                      "Finding clothes that align with my personal style used to
+                      be a challenge until I discovered Shop.co. The range of
+                      options they offer is truly remarkable, catering to a
+                      variety of tastes and occasions.”
+                    </p>
+                  </div>
+                </div>
+                <div class="card bg-slate-100 w-96 shadow-xl">
+                  <div class="card-body">
+                    <div>
+                      <div class="rating">
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                          checked="checked"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                      </div>
+                    </div>
+                    <h2 class="card-title">Mooen</h2>
+                    <p>
+                      "As someone who's always on the lookout for unique fashion
+                      pieces, I'm thrilled to have stumbled upon Shop.co. The
+                      selection of clothes is not only diverse but also on-point
+                      with the latest trends.”
+                    </p>
+                  </div>
+                </div>
+                <div class="card bg-slate-100 w-96 shadow-xl">
+                  <div class="card-body">
+                    <div>
+                      <div class="rating">
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                          checked="checked"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          type="radio"
+                          name="rating-2"
+                          class="mask mask-star-2 bg-orange-400"
+                        />
+                      </div>
+                    </div>
+                    <h2 class="card-title">James L.</h2>
+                    <p>
+                      "As someone who's always on the lookout for unique fashion
+                      pieces, I'm thrilled to have stumbled upon Shop.co. The
+                      selection of clothes is not only diverse but also on-point
+                      with the latest trends.”
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- OUR HAPPY CUSTOMERS Section End -->
+    </main>
+
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="footer bg-slate-900 text-base-content p-10">
+        <aside>
+          <h1 class="text-3xl font-bold text-white">SHOP.CO</h1>
+          <p>
+            ACME Industries Ltd.
+            <br />
+            Providing reliable tech since 1992
+          </p>
+        </aside>
+        <nav>
+          <h6 class="footer-title">Services</h6>
+          <a class="link link-hover">Branding</a>
+          <a class="link link-hover">Design</a>
+          <a class="link link-hover">Marketing</a>
+          <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Company</h6>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Legal</h6>
+          <a class="link link-hover">Terms of use</a>
+          <a class="link link-hover">Privacy policy</a>
+          <a class="link link-hover">Cookie policy</a>
+        </nav>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+  </body>
+</html>
